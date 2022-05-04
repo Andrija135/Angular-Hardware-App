@@ -1,0 +1,15 @@
+<h2>Hardver</h2>
+
+<ul class="hardwares">
+  <li
+    *ngFor="let item of hardwares"
+    (click)="onSelect(item)"
+    [class.selected]="item === selectedItem"
+  >
+    <a>
+      <span class="badge">{{ item.price }}</span> {{ item.name }}
+    </a>
+  </li>
+</ul>
+
+<app-hardware-detail [hardware]="selectedItem"></app-hardware-detail>
