@@ -15,3 +15,64 @@
     </button>
   </li>
 </ul>
+
+<div>
+  <h3>Unesi novi hardver</h3>
+  <div>
+    <label
+      >Naziv:
+      <div>
+        <input #name />
+      </div>
+    </label>
+  </div>
+  <div>
+    <label
+      >Šifra:
+      <div>
+        <input #code />
+      </div>
+    </label>
+  </div>
+  <div>
+    <label
+      >Cijena:
+      <div>
+        <input type="number" #price />
+      </div>
+    </label>
+  </div>
+  <div>
+    <label
+      >Tip
+      <div>
+        <select #type>
+          <option value="CPU">CPU</option>
+          <option value="GPU">GPU</option>
+          <option value="MBO">MBO</option>
+          <option value="RAM">RAM</option>
+          <option value="STORAGE">STORAGE</option>
+          <option value="OTHER">OTHER</option>
+        </select>
+      </div>
+    </label>
+  </div>
+  <div>
+    <label
+      >Broj komada na stanju:
+      <div>
+        <input type="number" #nrAvailable />
+      </div>
+    </label>
+  </div>
+  <button
+    (click)="
+      add(name.value, code.value, +price.value, type.value, +nrAvailable.value);
+      name.value = '';
+      code.value = '';
+      type.value = ''
+    "
+  >
+    Unesi hardver
+  </button>
+</div>

@@ -22,6 +22,28 @@ export class HardwaresComponent implements OnInit {
       .subscribe((hardwares) => (this.hardwares = hardwares));
   }
 
+  add(
+    name: string,
+    code: string,
+    price: number,
+    type: string,
+    nrAvailable: number
+  ): void {
+    name = name.trim();
+    code = code.trim();
+    type = type.trim();
+
+    if (!name || !code || !price || !type || !nrAvailable) {
+      return;
+    }
+
+    this.hardwareService
+      .addHardware({ name, code, price, type, nrAvailable } as Hardware)
+      .subscribe((hardware) => {
+        this.hardwares.push(hardware);
+      });
+  }
+
   delete(hardware: Hardware): void {
     this.hardwares = this.hardwares.filter((h) => h.code !== hardware.code);
     this.hardwareService.deleteHardware(hardware.code).subscribe();

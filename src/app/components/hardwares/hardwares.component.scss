@@ -6,11 +6,11 @@
     width: 15em;
   }
   
-  input {
+  input , select {
     display: block;
-    width: 100%;
     padding: .5rem;
-    margin: 1rem 0;
+    margin-bottom: 0.65rem;
+    margin-top: 0.15rem;
     box-sizing: border-box;
   }
   
