@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hardware } from 'src/app/hardware';
+import { ActivatedRoute } from '@angular/router';
+import { HardwareService } from 'src/app/services/hardware.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-hardware-detail',
@@ -7,9 +10,23 @@ import { Hardware } from 'src/app/hardware';
   styleUrls: ['./hardware-detail.component.scss'],
 })
 export class HardwareDetailComponent implements OnInit {
-  @Input() hardware: Hardware;
+  hardware: Hardware | undefined;
 
-  constructor() {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private service: HardwareService,
+    private location: Location
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let hardwareCode = this.activatedRoute.snapshot.paramMap.get('code');
+
+    this.service.getHardwares().subscribe((hardwaresList) => {
+      this.hardware = hardwaresList.find((x) => x.code == hardwareCode);
+    });
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }

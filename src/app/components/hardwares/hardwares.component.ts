@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Hardware } from 'src/app/hardware';
-import { HARDWARES } from 'src/app/mock-hardwares';
 import { HardwareService } from 'src/app/services/hardware.service';
 
 @Component({
@@ -10,8 +9,6 @@ import { HardwareService } from 'src/app/services/hardware.service';
 })
 export class HardwaresComponent implements OnInit {
   hardwares: Hardware[];
-
-  selectedItem: Hardware;
 
   constructor(private hardwareService: HardwareService) {}
 
@@ -25,8 +22,8 @@ export class HardwaresComponent implements OnInit {
       .subscribe((hardwares) => (this.hardwares = hardwares));
   }
 
-  onSelect(item: Hardware): void {
-    this.selectedItem = item;
-    console.log(this.selectedItem);
+  delete(hardware: Hardware): void {
+    this.hardwares = this.hardwares.filter((h) => h.code !== hardware.code);
+    this.hardwareService.deleteHardware(hardware.code).subscribe();
   }
 }

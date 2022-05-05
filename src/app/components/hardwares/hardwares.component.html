@@ -1,13 +1,17 @@
 <h2>Hardver</h2>
 
 <ul class="hardwares">
-  <li
-    *ngFor="let item of hardwares"
-    (click)="onSelect(item)"
-    [class.selected]="item === selectedItem"
-  >
-    <a> <span class="badge">🖥️</span> {{ item.name }} </a>
+  <li *ngFor="let hardware of hardwares">
+    <a [routerLink]="['/detail', hardware.code]">
+      <span class="badge">{{ hardware.code }} 🖥️</span> {{ hardware.name }}
+    </a>
+    <button
+      type="button"
+      class="delete"
+      title="delete hero"
+      (click)="delete(hardware)"
+    >
+      x
+    </button>
   </li>
 </ul>
-
-<app-hardware-detail [hardware]="selectedItem"></app-hardware-detail>
