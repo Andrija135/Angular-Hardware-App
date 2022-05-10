@@ -33,7 +33,7 @@ export class HardwaresComponent implements OnInit {
     code = code.trim();
     type = type.trim();
 
-    if (!name || !code || !price || !type || !nrAvailable) {
+    if (!name || !code || !price || !type || !nrAvailable || code.length < 5) {
       return;
     }
 

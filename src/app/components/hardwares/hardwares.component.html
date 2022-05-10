@@ -17,7 +17,7 @@
     <input #name />
   </label>
   <label>Šifra:
-    <input #code />
+    <input #code placeholder="min 5 znakova" />
   </label>
   <label>Cijena:
     <input type="number" #price />
@@ -39,7 +39,9 @@
     add(name.value, code.value, +price.value, type.value, +nrAvailable.value);
     name.value = '';
     code.value = '';
-    type.value = ''
+    price.value = '';
+    type.value = '';
+    nrAvailable.value = '';
   ">
     Unesi hardver
   </button>
