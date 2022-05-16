@@ -14,15 +14,21 @@ export class HardwareDetailComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private service: HardwareService,
+    private hardwareService: HardwareService,
     private location: Location
   ) {}
 
   ngOnInit(): void {
+    this.getHardware();
+  }
+
+  getHardware(): void {
     let hardwareCode = this.activatedRoute.snapshot.paramMap.get('code');
 
-    this.service.getHardwares().subscribe((hardwaresList) => {
-      this.hardware = hardwaresList.find((x) => x.code == hardwareCode);
+    this.hardwareService.getHardwares().subscribe((hardwaresList) => {
+      this.hardware = hardwaresList.find(
+        (hardware) => hardware.code == hardwareCode
+      );
     });
   }
 

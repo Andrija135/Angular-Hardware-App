@@ -27,18 +27,18 @@ export class HardwaresComponent implements OnInit {
     code: string,
     price: number,
     type: string,
-    nrAvailable: number
+    stock: number
   ): void {
     name = name.trim();
     code = code.trim();
     type = type.trim();
 
-    if (!name || !code || !price || !type || !nrAvailable || code.length < 5) {
+    if (!name || !code || !price || !type || !stock || code.length < 5) {
       return;
     }
 
     this.hardwareService
-      .addHardware({ name, code, price, type, nrAvailable } as Hardware)
+      .addHardware({ name, code, price, type, stock } as Hardware)
       .subscribe((hardware) => {
         this.hardwares.push(hardware);
       });

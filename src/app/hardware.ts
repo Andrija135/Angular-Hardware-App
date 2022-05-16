@@ -3,5 +3,5 @@ export interface Hardware {
   code: string;
   price: number;
   type: string;
-  nrAvailable: number;
+  stock: number;
 }

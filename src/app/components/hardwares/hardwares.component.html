@@ -2,7 +2,7 @@
 
 <ul class="hardwares">
   <li *ngFor="let hardware of hardwares">
-    <a [routerLink]="['/detail', hardware.code]">
+    <a routerLink="/detail/{{hardware.code}}">
       <span class="badge">{{ hardware.code }} 🖥️</span> {{ hardware.name }}
     </a>
     <button type="button" class="delete" title="delete hardware" (click)="delete(hardware)">
@@ -24,24 +24,24 @@
   </label>
   <label>Tip
     <select #type>
-      <option value="CPU">CPU</option>
-      <option value="GPU">GPU</option>
-      <option value="MBO">MBO</option>
-      <option value="RAM">RAM</option>
-      <option value="STORAGE">STORAGE</option>
-      <option value="OTHER">OTHER</option>
+      <option value='CPU'>CPU</option>
+      <option value='GPU'>GPU</option>
+      <option value='MBO'>MBO</option>
+      <option value='RAM'>RAM</option>
+      <option value='STORAGE'>STORAGE</option>
+      <option value='OTHER'>OTHER</option>
     </select>
   </label>
   <label>Broj komada na stanju:
-    <input type="number" #nrAvailable />
+    <input type="number" #stock />
   </label>
   <button (click)="
-    add(name.value, code.value, +price.value, type.value, +nrAvailable.value);
+    add(name.value, code.value, +price.value, type.value, +stock.value);
     name.value = '';
     code.value = '';
     price.value = '';
     type.value = '';
-    nrAvailable.value = '';
+    stock.value = '';
   ">
     Unesi hardver
   </button>
