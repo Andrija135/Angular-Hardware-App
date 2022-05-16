@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Hardware } from '../hardware';
+import { Hardware } from '../interfaces/hardware';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';

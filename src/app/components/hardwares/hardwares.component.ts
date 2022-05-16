@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hardware } from 'src/app/hardware';
+import { Hardware } from 'src/app/interfaces/hardware';
 import { HardwareService } from 'src/app/services/hardware.service';
 
 @Component({

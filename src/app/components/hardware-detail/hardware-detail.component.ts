@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Hardware } from 'src/app/hardware';
+import { Component, OnInit } from '@angular/core';
+import { Hardware } from 'src/app/interfaces/hardware';
 import { ActivatedRoute } from '@angular/router';
 import { HardwareService } from 'src/app/services/hardware.service';
 import { Location } from '@angular/common';

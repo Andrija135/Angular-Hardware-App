@@ -1,0 +1,12 @@
+<div class="Reviews">
+    <div *ngIf="reviews.length; else emptyList">
+        <h2>Recenzije za ovaj hardver:</h2>
+        <ul>
+            <li *ngFor="let review of reviews">{{review.title}}</li>
+        </ul>
+    </div>
+
+    <ng-template #emptyList>
+        <h2>Trenutno nema recenzija za ovaj hardver.</h2>
+    </ng-template>
+</div>
