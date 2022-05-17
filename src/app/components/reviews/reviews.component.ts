@@ -9,7 +9,7 @@ import { ReviewService } from 'src/app/services/review.service';
   styleUrls: ['./reviews.component.scss'],
 })
 export class ReviewsComponent implements OnInit {
-  reviews: Review[];
+  reviews: Review[] = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,

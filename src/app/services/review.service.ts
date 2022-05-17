@@ -17,7 +17,6 @@ export class ReviewService {
   constructor(private http: HttpClient) {}
 
   getReviewsByCode(code: string | null): Observable<Review[]> {
-    console.log(this.reviewsUrl + code);
     return this.http.get<Review[]>(this.reviewsUrl + code).pipe(
       tap((_) => console.log('fetched reviews')),
       catchError(this.handleError<Review[]>('getReviews', []))
