@@ -21,6 +21,14 @@ export class HardwareService {
     );
   }
 
+  getHardware(code: string | null): Observable<Hardware> {
+    const url = `${this.hardwaresUrl}/${code}`;
+    return this.http.get<Hardware>(url).pipe(
+      tap((_) => console.log(`fetched hardware code=${code}`)),
+      catchError(this.handleError<Hardware>(`getHardware code=${code}`))
+    );
+  }
+
   addHardware(hardware: Hardware): Observable<Hardware> {
     return this.http
       .post<Hardware>(this.hardwaresUrl, hardware, this.httpOptions)
