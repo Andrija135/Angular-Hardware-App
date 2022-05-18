@@ -23,13 +23,11 @@ export class HardwareDetailComponent implements OnInit {
   }
 
   getHardware(): void {
-    let hardwareCode = this.activatedRoute.snapshot.paramMap.get('code');
+    let code = this.activatedRoute.snapshot.paramMap.get('code');
 
-    this.hardwareService.getHardwares().subscribe((hardwaresList) => {
-      this.hardware = hardwaresList.find(
-        (hardware) => hardware.code == hardwareCode
-      );
-    });
+    this.hardwareService
+      .getHardwareByCode(code)
+      .subscribe((hardware) => (this.hardware = hardware));
   }
 
   goBack(): void {
