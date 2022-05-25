@@ -1,5 +1,8 @@
 # HardwareappFrontend
 
+## Angular-Hardware-App divided by assignments, each assignment has it's branch as well as its [Back-End-Repo](https://github.com/Andrija135/Spring-Boot-Hardware-App.git)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Development server
