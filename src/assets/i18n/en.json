@@ -1,0 +1,49 @@
+{
+  "language": {
+    "croatian": "Croatian",
+    "english": "English"
+  },
+  "navbar": {
+    "username": "Username",
+    "role": "Role",
+    "login": "Login",
+    "logout": "Log Out",
+    "loggedInAs": "Logged In as"
+  },
+  "forbidden": {
+    "unauthorisedMsg": "You do not have the right to access the requested page!",
+    "message": "Back to home page"
+  },
+  "hardware": {
+    "hardware": "Hardware",
+    "hardwares": "Hardwares",
+    "detailsAbout": "Details about",
+    "price": "Price",
+    "installments": "This hardware can be purchased in 6 installments.",
+    "reviews": "Reviews for this hardware",
+    "noReviews": "There are currently no reviews for this hardware",
+    "goBack": "Back",
+    "addHardware": "Add hardware",
+    "addNewHardware": "Unesi new hardware",
+    "code": "Code",
+    "name": "Name",
+    "type": "Type",
+    "storage": "Storage",
+    "other": "Other",
+    "stock": "Left on the stock",
+    "enterHardware": "Enter new Hardware"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "loginError": "Login failed! Please check your data and try again.",
+    "usernamePlaceholder": "Enter user name",
+    "passwordPlaceholder": "Enter password"
+  },
+  "pageNotFound": {
+    "notFoundMsg": "The requested page was not found",
+    "backToHome": "Back to home page"
+  }
+}
