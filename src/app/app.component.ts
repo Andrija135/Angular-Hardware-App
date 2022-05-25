@@ -20,6 +20,14 @@ export class AppComponent {
     translate.use('hr');
   }
 
+  setLang(lang: 'hr' | 'en') {
+    this.translate.use(lang);
+  }
+
+  isActive(lang: 'hr' | 'en') {
+    return this.translate.currentLang === lang;
+  }
+
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']).then();
