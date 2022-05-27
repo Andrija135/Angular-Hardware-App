@@ -20,11 +20,11 @@ export class AppComponent {
     translate.use('hr');
   }
 
-  setLang(lang: 'hr' | 'en') {
+  setLang(lang: 'hr' | 'en' | 'fi') {
     this.translate.use(lang);
   }
 
-  isActive(lang: 'hr' | 'en') {
+  isActive(lang: 'hr' | 'en' | 'fi') {
     return this.translate.currentLang === lang;
   }
 
