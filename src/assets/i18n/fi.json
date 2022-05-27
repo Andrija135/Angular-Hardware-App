@@ -1,0 +1,50 @@
+{
+  "language": {
+    "croatian": "Kroatian",
+    "english": "Englannin",
+    "finnish": "Suomalainen"
+  },
+  "navbar": {
+    "username": "Käyttäjätunnus",
+    "role": "Rooli",
+    "login": "Kirjaudu sisään",
+    "logout": "Kirjautua ulos",
+    "loggedInAs": "Kirjautunut sisään nimellä"
+  },
+  "forbidden": {
+    "unauthorisedMsg": "Sinulla ei ole oikeutta käyttää pyydettyä sivua!",
+    "message": "Takaisin kotisivulle"
+  },
+  "hardware": {
+    "hardware": "Laitteisto",
+    "hardwares": "Laitteet",
+    "detailsAbout": "Tietoja aiheesta",
+    "price": "Hinta",
+    "installments": "Tämän laitteiston voi ostaa 6 erässä.",
+    "reviews": "Arvostelut tälle laitteistolle",
+    "noReviews": "Tälle laitteistolle ei ole tällä hetkellä arvioita",
+    "goBack": "Takaisin",
+    "addHardware": "Lisää laitteisto",
+    "addNewHardware": "Syötä uusi laitteisto",
+    "code": "Koodi",
+    "name": "Nimi",
+    "type": "Tyyppi",
+    "storage": "Varastointi",
+    "other": "Muut",
+    "stock": "Jätetty varastoon",
+    "enterHardware": "Anna uusi laitteisto"
+  },
+  "login": {
+    "title": "Kirjaudu sisään",
+    "username": "Käyttäjätunnus",
+    "password": "Salasana",
+    "loginButton": "Kirjaudu sisään",
+    "loginError": "Kirjautuminen epäonnistui! Tarkista tietosi ja yritä uudelleen.",
+    "usernamePlaceholder": "Syötä käyttäjätunnus",
+    "passwordPlaceholder": "Kirjoita salasana"
+  },
+  "pageNotFound": {
+    "notFoundMsg": "Pyydettyä sivua ei löytynyt",
+    "backToHome": "Takaisin kotisivulle"
+  }
+}
