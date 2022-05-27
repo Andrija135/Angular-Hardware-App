@@ -2,6 +2,17 @@
 
 ## Angular-Hardware-App divided by assignments, each assignment has it's branch as well as its [Back-End-Repo](https://github.com/Andrija135/Spring-Boot-Hardware-App.git)
 
+### Labos01 -> REST API
+### Labos02 -> Validating REST API
+### Labos03 -> Angular Front-End
+### Labos04 -> Angular Routing & Connection with Spring-Boot services
+### Labos05 -> Spring JdbcTemplate and embedded H2
+### Labos06 -> Spring Data JPA
+### Labos07 -> Spring Security
+### Labos08 -> Internationalization in the Angular application
+### Labos09 -> JUnit
+### Labos10 -> 
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
