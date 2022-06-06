@@ -1,4 +1,4 @@
-# HardwareappFrontend
+# Angular-Hardware-App
 
 ## Angular-Hardware-App divided by assignments, each assignment has it's branch as well as its [Back-End-Repo](https://github.com/Andrija135/Spring-Boot-Hardware-App.git)
 
