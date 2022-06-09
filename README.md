@@ -11,7 +11,7 @@
 - Labos07 -> Spring Security
 - Labos08 -> Internationalization in the Angular application
 - Labos09 -> JUnit
-- Labos10 -> 
+- Labos10 -> Quartz Scheduler
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
